@@ -23,6 +23,9 @@ Additional Info/Links
 * I spoke about these at SXSW 09 on a groovy EE2 panel: [SXSW ExpressionEngine2: Total Domination Slides](http://www.slideshare.net/guestf9c0bc/expressionengine-2-total-domination) (Slides 50-75)
 * Ryan Irelan wrote about them on [EE Insider](http://eeinsider.com/blog/expressionengine-starter-files/)
 
+Tags
+--------
+* 1.00 Initial Install
 
 Author
 --------
@@ -39,3 +42,6 @@ Additional Credits
 [@markhuot](http://twitter.com/markhuot) and [@kennymeyers](http://twitter.com/kennymeyers) have smart brains and helped with this project in large ways or small annoying ones. Not naming names. 
 
 [Happy Cog](http://happycog.com) has given a reason to make it happen. 
+
+
+
