@@ -28,6 +28,7 @@ Tags
 
 * 1.00 Initial Install
 * 1.10 Adding Readme markdown file, fixed a typo in the results template
+* 1.20 Changed server-side php strings/comments to EE comments
 
 Author
 --------
