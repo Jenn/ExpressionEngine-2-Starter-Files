@@ -19,7 +19,7 @@ Additional Info/Links
 
 * The example site of what these files make can be seen on [starterfiles.com](http://starterfiles.com/)
 * I'm writing a series on the thought behind the contents on the development blog, [The Nerdary](http://thenerdary.net/). This readme will be updated with the posts.
-** Why I use PHP strings in the markup (server-side comments): [Hide Your Kids, Hide Your Wife, and Hide Your Comments](http://thenerdary.net/articles/entry/hide_your_kids_hide_your_wife_and_hide_your_comments)
+    * Why I use PHP strings in the markup (server-side comments): [Hide Your Kids, Hide Your Wife, and Hide Your Comments](http://thenerdary.net/articles/entry/hide_your_kids_hide_your_wife_and_hide_your_comments)
 * I spoke about these at SXSW 09 on a groovy EE2 panel: [SXSW ExpressionEngine2: Total Domination Slides](http://www.slideshare.net/guestf9c0bc/expressionengine-2-total-domination) (Slides 50-75)
 * Ryan Irelan wrote about them on [EE Insider](http://eeinsider.com/blog/expressionengine-starter-files/)
 
