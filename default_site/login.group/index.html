@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>ExpressionEngine Starter Files</title>    
+
+{embed="inc/meta"}
+
+{embed="inc/cssReference"}
+</head>
+
+<body class="home">
+
+{embed="/inc/skip"}
+		
+{embed="/inc/header"}
+	
+
+<?php '#content-wrap' ?><div id="content-wrap">	
+	
+	<?php '#content' ?><div id="content">
+	
+		<h1>Login</h1>		
+		
+		{exp:member:login_form return="/" id="login-form"}
+
+			<p>
+				<label for="username">Username</label>
+				<input type="text" name="username" id="username" maxlength="32" />
+			</p>
+		
+			<p>
+				<label class="password">Password</label>
+				<input type="password" name="password" id="password" maxlength="32" />
+			</p>
+		
+			{if auto_login}
+				<p class="inline">
+					<input type='checkbox' name='auto_login' id="auto_login" value='1' /> 
+					<label for="auto_login">Auto-login on future visits</label>
+				</p>
+			{/if}	
+		
+			<p>
+				<input type="submit" name="submit" value="Submit" />
+			</p>
+		
+			<p>
+				<a href="{path='member/forgot_password'}">Forgot Password?</a>
+			</p>
+					
+		{/exp:member:login_form}
+		
+		<p>Not a member yet? <a href="{path='member/register'}">Register</a>.</p>
+			
+	</div><?php '/#content' ?>
+	
+</div><?php '/#content-wrap' ?>
+
+
+{embed="inc/footer"}
+	
+{embed="inc/jsReference"}
+		
+		
+</body>
+</html>

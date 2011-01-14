@@ -1,0 +1,20 @@
+/*
+*************************************************
+
+ExpressionEngine Starter Files
+Enhanced Styles for JavaScript
+
+Created by Jenn Lukas
+http://www.jennlukas.com/
+
+*************************************************
+*/
+
+.nav-login { position: relative; }
+	.nav-login a.on { display: block; padding: 5px; background: #0fb78e; color: #fff; border-bottom: 5px solid #fff; }
+		.login-wrap { position: absolute; right: 0; padding: 10px 15px; background: #fff; border: 5px solid #0fb78e; }
+		* html .login-wrap { position: static; }
+			.login-wrap p { margin-bottom: 0.5em; }
+				.login-wrap .inline label { font-size: 0.8em; }
+				a.close-login { display: block; color: #f00; text-align: right; }
+					a.close-login:hover, a.close-login:focus { color: #781273; }

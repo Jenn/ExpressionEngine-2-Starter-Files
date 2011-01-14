@@ -1,0 +1,40 @@
+<?php '#header-wrap' ?><div id="header-wrap">
+	<?php '#header' ?><div id="header">
+
+		{if segment_1}
+			<strong class="logo"><a href="{path=/}" title="Home">Home</a></strong> 
+		{if:else} 
+			<h1 class="logo"><a href="{path=/}" title="Home">Home</a></h1>
+		{/if}
+		
+		<ul class="utility-nav">
+			{if logged_in}
+				<li>Hello <a href="{path='/member/edit_profile/'}">{logged_in_username}</a>!</li>
+				<li><a href="{path='logout'}">Log out.</a></li>
+			{if:else}
+				<li><a href="{path='member/register'}">Sign up.</a></li>
+				<li class="nav-login"><a href="{path=/login/}" class="login-link">Log in.</a></li>
+			{/if}
+		</ul>
+				
+		<ul class="main-nav">
+			<li><a href="{path=/news/}">News</a></li>
+			<li><a href="{path=/about/}">About</a></li>
+			<li><a href="{path=/contact/}">Contact</a></li>
+			<li><a href="{path=/download/}">Download</a></li>
+		</ul>
+		
+		{exp:search:simple_form channel="news" id="site-search" no_result_page="search/no-results" results="10" search_in="entries" status="open"}
+
+			<p>
+				<label for="keywords">Search:</label>
+				<input type="text" name="keywords" id="keywords" value="Ex: Kittens, Baseball, Emilio Estevez" class="filled" maxlength="100" />
+			</p>
+			
+			<p><input type="submit" value="submit" class="submit" /></p>
+			
+		{/exp:search:simple_form}
+		
+
+	</div><?php '/#header' ?>
+</div><?php '/#header-wrap' ?>

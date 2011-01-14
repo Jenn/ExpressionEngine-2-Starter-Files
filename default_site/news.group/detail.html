@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>News &mdash; ExpressionEngine Starter Files</title>    
+
+{embed="inc/meta"}
+
+{embed="inc/cssReference"}
+</head>
+
+<body class="news">
+
+{embed="/inc/skip"}
+		
+{embed="/inc/header"}
+	
+
+<?php '#content-wrap' ?><div id="content-wrap">	
+	
+	<?php '#content' ?><div id="content">
+	
+		{exp:channel:entries channel="news" limit="1"}
+		
+			<h1>{title}</h1>
+			
+			<strong class="meta">{entry_date format="%F %d, %Y"}</strong>
+			
+			{if news-image-large}<img src="{news-image-large}" alt="" />{/if}
+	
+			{news-body}
+				
+		{/exp:channel:entries}
+		
+		
+		<h2>Comments</h2>
+				
+		{exp:comment:entries weblog="news"}
+			{if count == 1}<ul class="comments">{/if}
+		
+			<li{if count == 1} class="first"{/if}>
+				<h3><img src="{exp:gravatar email="{email}" rating="R" size="50" default="http://jennlukas.com/images/screen/default-of-doom.gif"}" alt="" /> {url_as_author} said&hellip;</h3>
+				
+				{exp:textile}{comment}{/exp:textile}
+				
+				<p class="meta">Posted at {comment_date format='%h:%i %A'} on {comment_date format="%F %d, %Y"}</p>							
+			</li>
+			{if count == total_results}</ul>{/if}
+		
+			{if no_results}
+				<p>How boring. No comments yet. Add some fun below.</p>
+			{/if}
+			
+		{/exp:comment:entries}
+					
+		<h3 class="section">Post a Comment</h3>
+	
+		<div class="comment-form">
+		    {exp:comment:form}
+		        <ul>
+		        
+		        	{if logged_out}
+			            <li>
+			                <label for="name">Name</label>
+			                <input type="text" class="comment_textbox" name="name" id="name" value="{name}" />
+			            </li>
+			            <li>
+			                <label for="email">Email (not published)</label>
+			                <input type="text" class="comment_textbox" name="email" id="email" value="{email}" />
+			            </li>
+			            <li>
+			                <label for="url">URL</label>
+			                <input type="text" class="comment_textbox" name="url" id="url" value="{url}" />
+			            </li>
+			        {/if}
+		          				        
+			        <li>
+			            <label for="comment">Comments</label>
+			            <textarea name="comment" id="comment" cols="60" rows="12">{comment}</textarea>
+			        </li>
+			      				        
+			        <li class="inline">
+			        	<input type="checkbox" name="notify_me" id="notify_me" value="yes" {notify_me} /> <label for="notify_me">Notify me of follow-up comments?</label>
+			        </li>
+			        
+			        {if captcha}
+			            <li>
+			                Apologies to Number Five and the T-1000:<br/>
+			                {captcha}
+			            </li>
+			     
+			            <li>
+			                <label for="captcha">Place above word here:</label>
+			                <input type="text" name="captcha" id="captcha" value="" size="20" maxlength="20" />
+			            </li>
+			        {/if}
+		        </ul>
+		        
+		        <div class="submit">
+		        	<input type="submit" value="Submit" />
+		        </div>
+		    {/exp:comment:form}
+		</div> 
+						
+				
+	</div><?php '/#content' ?>
+	
+</div><?php '/#content-wrap' ?>
+
+
+{embed="inc/footer"}
+	
+{embed="inc/jsReference"}
+		
+		
+</body>
+</html>

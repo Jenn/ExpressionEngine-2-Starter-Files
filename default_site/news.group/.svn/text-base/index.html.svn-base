@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>News&mdash; Happy Cog&rsquo;aoke 2</title>    
+
+    {embed="inc/.meta"}
+
+	{embed="inc/.cssReference"}
+</head>
+
+<body class="news">
+
+{embed="/inc/.skip"}
+		
+<?php '#action-wrap' ?><div id="action-wrap">
+<?php '#action-wrap' ?><div id="action-wrap2">
+<?php '#radial-wrap' ?><div id="radial-wrap">
+			
+	
+	{embed="/inc/.main-nav"}
+		
+
+	<?php '#action' ?><div id="action">
+		
+		<h2 class="ir-cogaoke-news">Cog&rsquo;aoke News</h2>
+				
+	</div><?php '/#action' ?>
+
+</div><?php '/#radial-wrap2' ?>
+</div><?php '/#action-wrap2' ?>
+</div><?php '/#action-wrap' ?>	
+
+
+
+<?php '#content-wrap' ?><div id="content-wrap">	
+	
+	<?php '#content' ?><div id="content">
+							
+		<?php '#main' ?><div id="main">
+
+			{exp:channel:entries channel="news" limit="10"}
+			<div class="entry">
+				<h3 class="zeta"><a href="{title_permalink=news/detail}">{title}</a></h3>
+				
+				<strong class="iota">{entry_date format="%F %d, %Y"}</strong>
+								
+				{news_body}
+				{if news_extended}
+				<p class="more"><a href="{title_permalink=news/detail}">Read more</a></p>             
+				{/if}
+			</div>
+			{/exp:channel:entries}
+			
+		</div><?php '/#main' ?>
+		
+		
+		<?php '#sub' ?><div id="sub">
+		
+			<div class="icon-day day-{exp:mh_days_until target='2010-03-13'}">
+				<h3 class="kappa"><strong>{exp:mh_days_until target='2010-03-13'}</strong> Day{exp:mh_days_until:plural target='2010-03-13'} left until the party!</h3>
+				<p class="more"><a href="{path=/party}#scoot-inn-map">Get directions.</a></p>
+			</div>
+			
+			<div class="latest-tweet">
+				{exp:twitter_timeline type="user" user="cogaoke" password="d0gball$" limit="1" parse="inward"}
+					{exp:textile}{text}{/exp:textile}
+				{/exp:twitter_timeline}
+			</div>
+			
+			<p class="link-twitter"><a href="http://www.twitter.com/cogaoke" class="more">Follow Cog&rsquo;aoke on: <em>Twitter</em></a></p>
+			
+			
+		
+		</div><?php '/#sub' ?>
+		
+	</div><?php '/#content' ?>
+	
+</div><?php '/#content-wrap' ?>
+
+
+{embed="inc/.footer"}
+	
+{embed="inc/.jsReference"}
+		
+		
+</body>
+</html>

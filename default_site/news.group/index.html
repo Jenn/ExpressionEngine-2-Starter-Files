@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>News &mdash; ExpressionEngine Starter Files</title>    
+
+{embed="inc/meta"}
+
+{embed="inc/cssReference"}
+</head>
+
+<body class="home">
+
+{embed="/inc/skip"}
+		
+{embed="/inc/header"}
+	
+
+<?php '#content-wrap' ?><div id="content-wrap">	
+	
+	<?php '#content' ?><div id="content">
+	
+		<h1>News</h1>
+	
+		
+		{exp:channel:entries channel="news" limit="2" paginate="bottom"}
+			{if count == "1"}<ul class="roll">{/if}
+				
+				<li>
+					<h2>
+						<a href="{title_permalink=news/detail}">{title}</a>
+					</h2>
+					
+					<span class="meta">Added 
+					<?php
+						$this->EE->load->helper('date');
+						$post_date = "{entry_date}";
+				    	$now = time();
+				    	echo timespan($post_date, $now);
+				    ?> ago
+					</span>
+					
+					{if news-excerpt}
+						{news-excerpt}
+						<p class="more"><a href="{title_permalink=news/detail}">Continue reading {title}</a></p> 
+					{if:else}
+						{news-body}
+					{/if}				
+					
+				</li>
+				
+			{if count == total_results}</ul>{/if}
+			
+			{paginate}
+				<div class="pagination">
+					{pagination_links}
+				</div>
+			{/paginate}
+
+		{/exp:channel:entries}
+	
+				
+	</div><?php '/#content' ?>
+	
+</div><?php '/#content-wrap' ?>
+
+
+{embed="inc/footer"}
+	
+{embed="inc/jsReference"}
+		
+		
+</body>
+</html>

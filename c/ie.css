@@ -1,0 +1,48 @@
+/*
+*************************************************
+
+ExpressionEngine Starter Files
+IE Screen Styles for IE 7 and below
+
+Created by Jenn Lukas
+http://www.jennlukas.com/
+
+*************************************************
+*/
+
+/*-------------------------------------------    
+    General Selectors
+-------------------------------------------*/
+
+/* block level */
+
+p, ul, dl, ol { /*font-size: 1.2em;*/ }
+
+h1 { /*font-size: 2.2em;*/ }
+h2 { /*font-size: 1.4em;*/ }
+h3 { /*font-size: 1em;*/ }
+h4 { /*font-size: 1.2em;*/ }
+h5 { /*font-size: 1.1em;*/ }
+h6 { /*font-size: 1.1em;*/ }
+
+ul { /* margin-left: 15px; position: relative; left: -15px; */ }
+ol { /* margin-left: 25px; position: relative; left: -25px; */ }
+
+table { /*font-size: 1.2em;*/ }
+
+
+/* inline */
+
+input, textarea { /*font-size: 1.2em;*/ } 
+
+code { /*font: 1.2em;*/ }
+
+
+/*-------------------------------------------    
+    Global combinations
+-------------------------------------------*/
+.main-nav, .utility-nav, .split { height: 1%; }
+
+/*-------------------------------------------    
+    Structure
+-------------------------------------------*/

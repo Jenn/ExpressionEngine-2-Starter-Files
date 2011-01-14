@@ -1,0 +1,148 @@
+/*
+*************************************************
+
+ExpressionEngine Starter Files
+General Screen Styles
+
+Created by Jenn Lukas
+http://www.jennlukas.com/
+
+*************************************************
+*/
+
+/*-------------------------------------------    
+    General Selectors
+-------------------------------------------*/
+* { margin: 0; padding: 0; line-height: 1.4; }
+body { font: normal 62.5% Helvetica, Verdana, Arial, sans-serif; background-color: #a8aaad; }
+
+
+/* block level */
+
+h1, h2, h3, h4, h5, h6 { font-family: Georgia, serif; }
+h1 { color: #333; font-size: 1.8em; margin: 0 0 0.8em; }
+h2 { color: #333; font-size: 1.8em; margin: 0 0 0.9em; padding-bottom: 0.2em; border-bottom: 3px double #333; }
+h3 { color: #693; font-size: 1.4em; margin: 0 0 0.8em; }
+h4 { color: #333; font-size: 1.2em; margin: 0 0 0.8em; }
+h5 { color: #333; font-size: 1.1em; margin: 0 0 0.8em; }
+h6 { color: #333; font-size: 1.0em; margin: 0 0 0.8em; }
+
+p, ul, dl, ol { color: #333; font-size: 1em; margin: 0 0 1.5em; }
+p, li { font-size: 1.2em; }
+
+#content ul { position: relative; left: 20px; }
+#content ol { position: relative; left: 25px; }
+
+blockquote { margin: 0 0 1.2em; }
+
+fielset { margin: 0 0 1em; }
+
+/* inline */
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+a { color: #0fb78e; }
+a:hover, a:focus { color: #286046; }
+
+img { display: block; margin-bottom: 15px; }
+
+a img { border: none; }
+
+#content label { display: block; }
+#content .inline label { display: inline; }
+
+
+/*-------------------------------------------    
+    Global combinations
+-------------------------------------------*/
+#image-replaced a { display: block; text-indent: -9999px; background-color: transparent; background-position: 0 0; background-repeat: no-repeat; overflow: hidden; }
+
+.main-nav:after, .utility-nav:after, .utility-nav li:after, .split:after, .author:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; font-size: 0; }
+
+.move { position: absolute; left: -9999px; }
+.hide { display: none; }
+
+
+/*-------------------------------------------    
+    Structure
+-------------------------------------------*/
+#header-wrap { background: #c1c6cd; border-bottom: 5px solid #000; }
+	#header { width: 960px; margin: 0 auto; padding: 15px 0; }
+
+#content-wrap { background: #333; }
+	#content { width: 920px; margin: 0 auto; padding: 25px 20px; background: #fff; }
+
+#footer-wrap { border-top: 5px solid #000; }
+	#footer { width: 920px; margin: 0 auto; padding: 25px 20px; font-size: 1.2em; }
+
+.split { background: transparent url(/images/screen/divider.gif) repeat-y 50% 0; }
+	.node { float: left; width: 45%; margin-left: 10%; }
+	.split .first { margin-left: 0; }
+
+.section { margin-bottom: 20px; border-bottom: 3px solid #333; }
+
+/*-------------------------------------------    
+    Header
+-------------------------------------------*/
+.logo { display: block; margin-bottom: 1em; padding: 6px; background: #fff; border-bottom: 5px double #000;  }
+	.logo a { color: #0d9976; font: bold 3.5em Helvetica, Verdana, Arial, sans-serif; text-decoration: none; }
+		.logo a:hover, .logo a:focus { color: #286046; }
+
+.main-nav { float: left; }
+	.main-nav li { list-style-type: none; float: left; margin: 0 10px 0 0; }
+		.main-nav li a { display: block; padding: 7px; background: #fff; font-size: 1.4em; }
+			.main-nav li a:hover, .main-nav li a:focus { background: #286046; color: #fff; }
+
+.utility-nav { float: right; margin-top: 0.5em; }
+	.utility-nav li { list-style-type: none; float: left; margin: 0 10px 0 0; padding: 5px; background: #fff; }
+#site-search { clear: both; text-align: right; }
+	#site-search * { vertical-align: middle; }
+	#site-search p { display: inline; }
+		#site-search label { font-weight: bold; }
+		#keywords { width: 200px; color: #666; }
+			#keywords:focus { background: #e4e7ad; color: #333; }
+			
+
+/*-------------------------------------------    
+    Footer
+-------------------------------------------*/
+#footer a { color: #b543af; }
+	#footer a:hover, #footer a:focus { color: #781273; }
+
+#footer ul, #footer ol { position: relative; left: 25px; }
+
+
+/*-------------------------------------------    
+    General Styles
+-------------------------------------------*/
+.elevator { margin-bottom: 40px; padding: 10px; background: #cad7d4; border: 5px double #333; }
+	.elevator h2 { color: #287183; font-weight: normal; text-transform: uppercase; letter-spacing: 1px; }
+
+.meta { display: block; margin-bottom: 0.5em; font-size: 0.9em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+
+.more:before { content:"\00bb"; font-size: 1.3em; margin-right: 2px; }
+
+.tweet { position:relative; margin: 0 0 1em; padding: 15px; background: #eee; color:#333; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; }
+	.tweet:after { content:"\00a0"; position:absolute; display:block; bottom:-30px; left:40px; width:0; height:0; border-width: 15px 15px; border-style: solid; border-color: #eee transparent transparent; }
+	.tweet p { margin-bottom: 0.2em; font-size: 1.4em; line-height: 1.8; }
+
+.author { margin-bottom: 30px; padding-left: 70px; font-size: 1.2em; }
+	.author img { float: left; margin: 0 10px 30px 0; }
+	.author .meta { display: inline; }
+
+#content ul.roll { left: 0; }
+	.roll li { list-style-type: none; margin-bottom: 1.5em; padding-bottom: 0.5em; border-bottom: 1px solid #333; }
+		.roll p { margin-bottom: 1em; }
+		.roll h3 img { float: left; margin: 0 15px 10px 0; }
+
+.pagination { text-align: right; font-size: 1.2em; }
+	.roll h2 { margin-bottom: 0.1em; border: none; }
+
+#content #comment_form ul, #content .comments { left: 0; }
+	#comment_form li, .comments li { list-style-type: none; margin-bottom: 10px; }
+	
+.comments { margin-bottom: 2.3em; }
+	.comments li { margin-bottom: 10px; padding-top: 15px; border-top: 2px solid #333; font-size: 1em; }
+	.comments li.first { border: none; padding-top: 0; }
+		.comments img { display: inline; margin-bottom: 0; }

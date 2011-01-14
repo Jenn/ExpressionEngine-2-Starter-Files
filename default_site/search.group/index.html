@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Advanced Search &mdash; ExpressionEngine Starter Files</title>    
+
+{embed="inc/meta"}
+
+{embed="inc/cssReference"}
+</head>
+
+<body>
+
+{embed="/inc/skip"}
+		
+{embed="/inc/header"}
+	
+
+<?php '#content-wrap' ?><div id="content-wrap">	
+	
+	<?php '#content' ?><div id="content">
+	
+		<h1>Advanced Search</h1>
+	
+		{exp:search:advanced_form id="advanced-search" result_page="search/results" no_result_page="search/no-results" results="10" search_in="everywhere" status="open"}
+			
+			<fieldset>
+			
+				<legend>{lang:search_by_keyword}</legend>
+			
+				<p>
+					<label for="adv-keywords">Keyword:</label>
+					<input type="text" class="input" maxlength="100" name="keywords" id="adv-keywords" />
+				</p>
+				
+			
+				<p>
+					<label for="search_in">Where your keywords show up:</label>
+					<select name="search_in" id="search_in">
+						<option value="titles" selected="selected">{lang:search_in_titles}</option>
+						<option value="entries">{lang:search_in_entries}</option>
+						<option value="everywhere">{lang:search_everywhere}</option>
+					</select>
+				</p>
+			
+				<p>
+					<label for="where">Search for:</label>
+					<select name="where" id="where">
+						<option value="exact" selected="selected">{lang:exact_phrase_match}</option>
+						<option value="any">{lang:search_any_words}</option>
+						<option value="all" >{lang:search_all_words}</option>
+						<option value="word" >{lang:search_exact_word}</option>
+					</select>
+				</p>
+			
+			</fieldset>
+			
+
+			
+			<fieldset>
+				
+				<legend>{lang:search_by_member_name}</legend>
+			
+				<p>
+					<label for="member_name">Member name:</label>
+					<input type="text" class="input" maxlength="100" name="member_name" id="member_name" />
+				</p>
+				
+				<p class="inline">
+					<input type="checkbox" name="exact_match" id="exact_match" value="y" /> 
+					<label for="exact_match">{lang:exact_name_match}</label>
+				</p>
+			
+			</fieldset>
+			
+			
+		<!--
+	<fieldset>
+				
+				<legend>Filter by:</legend>
+			
+				<p>
+					<label for="channel_id">{lang:channels}:</label>
+					<select id="channel_id" name='channel_id[]' size='12' multiple='multiple' onchange='changemenu(this.selectedIndex);'>
+						{channel_names}
+					</select>
+				</p>
+				
+				<p>
+					<label for="category_id">{lang:categories}</label>
+					<select name='cat_id[]' id="category_id" size='12' class='multiselect' multiple='multiple'>
+						<option value='all' selected="selected">{lang:any_category}</option>
+					</select>
+				</p>
+			
+			</fieldset>
+-->
+						
+			
+			<fieldset>
+				<legend>{lang:search_entries_from}</legend>
+				
+				<p>
+					<label for="search_date">Date range:</label>
+					<select name="date" id="search_date">
+						<option value="0" selected="selected">{lang:any_date}</option>
+						<option value="1" >{lang:today_and}</option>
+						<option value="7" >{lang:this_week_and}</option>
+						<option value="30" >{lang:one_month_ago_and}</option>
+						<option value="90" >{lang:three_months_ago_and}</option>
+						<option value="180" >{lang:six_months_ago_and}</option>
+						<option value="365" >{lang:one_year_ago_and}</option>
+					</select>
+				</p>
+				
+				
+				<p class="inline">
+					<!-- switching single quotes to doubles -->
+					<input type="radio" name="date_order" id="date_order_newer" value="newer" checked="checked" />
+					<label for="date_order_newer">{lang:newer}</label>
+					
+					<input type="radio" name="date_order" id="date_order_older" value="older" />
+					<label for="date_order_older">{lang:older}</label>
+				</p>
+			
+			</fieldset>
+			
+			
+			
+			<fieldset class="fieldset">
+				<legend>{lang:sort_results_by}</legend>
+				
+				<p>
+					<label for="orderby">Sort type:</label>
+					<select name="orderby" id="orderby">
+						<option value="date" >{lang:date}</option>
+						<option value="title" >{lang:title}</option>
+						<option value="most_comments" >{lang:most_comments}</option>
+						<option value="recent_comment" >{lang:recent_comment}</option>
+					</select>
+				</p>
+			
+				<div class="inline">
+						<input type="radio" name="sort_order" id="sort_descending" value="desc" checked="checked" />
+						<label for="sort_descending">{lang:descending}</label>
+						
+						<input type="radio" name="sort_order" id="sort_ascending" value="asc" />
+						<label for="sort_ascending">{lang:ascending}</label>
+				</div>
+			
+			</fieldset>
+			
+			<p>
+				<input type='submit' value='Search' class='submit' />
+			</p>
+			
+		{/exp:search:advanced_form}
+				
+	</div><?php '/#content' ?>
+	
+</div><?php '/#content-wrap' ?>
+
+
+{embed="inc/footer"}
+	
+{embed="inc/jsReference"}
+		
+		
+</body>
+</html>

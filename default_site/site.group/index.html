@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>ExpressionEngine Starter Files</title>    
+
+{embed="inc/meta"}
+
+{embed="inc/cssReference"}
+</head>
+
+<body class="home">
+
+{embed="/inc/skip"}
+		
+{embed="/inc/header"}
+	
+
+<?php '#content-wrap' ?><div id="content-wrap">	
+	
+	<?php '#content' ?><div id="content">
+	
+		<div class="elevator">
+			
+			<h2>Hi! Welcome to this web site!!</h2>
+			
+			<p>This is where your elevator pitch goes! An elevator pitch is an overview of an idea for a product, service, or project. The name reflects the fact that an elevator pitch should be possible to deliver in the time span of an elevator ride, meaning in a maximum of 30 seconds and in 130 words or fewer.</p>
+		
+		</div>
+		
+		
+		<div class="split">
+		
+			<div class="node first">
+			
+				<h2>Latest News</h2>
+		
+				{exp:channel:entries channel="news" limit="3"}
+					{if count == "1"}<ul class="roll">{/if}
+						
+						<li>
+							<h3>
+								<a href="{title_permalink=news/detail}">
+									{if news-image-small}<img src="{news-image-small}" width="125" height="125" alt="" />{/if}
+									{title}
+								</a>
+							</h3>
+							
+							{if news-excerpt}
+								{news-excerpt}
+							{if:else}
+								{news-body}
+							{/if}
+							
+							<span class="meta">Added 
+							<?php
+								$this->EE->load->helper('date');
+								$post_date = "{entry_date}";
+						    	$now = time();
+						    	echo timespan($post_date, $now);
+						    ?> ago
+							</span>
+						</li>
+						
+					{if count == total_results}</ul>{/if}
+				{/exp:channel:entries}
+					
+				
+				<p class="more"><a href="{path=/news/}">Read more news</a></p>
+				
+			</div>
+			
+			
+			<div class="node">
+				
+				<h2>Latest from Twitter</h2>
+				
+				{exp:twitter_timeline type="public" limit="1"}
+					<blockquote class="tweet">					
+						<p>{text}</p>
+					</blockquote>
+					
+					<div class="author">
+						<img src="{profile_image_url}" width="32" height="32" alt="Twitter avatar" />
+						{name}
+						<span class="meta">{created_at format="%F %d, %Y"}</span>
+					</div>
+						
+				{/exp:twitter_timeline}
+				
+				<h2>Download the Files!</h2>
+				
+				<p>Dig what&rsquo;s going on here? Download the <a href="/download/">Starter Files</a>.</p>
+				
+			</div>
+		
+		</div>
+		
+		
+				
+	</div><?php '/#content' ?>
+	
+</div><?php '/#content-wrap' ?>
+
+
+{embed="inc/footer"}
+	
+{embed="inc/jsReference"}
+		
+		
+</body>
+</html>

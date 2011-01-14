@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>News&mdash; Happy Cog&rsquo;aoke 2</title>    
+
+    {embed="inc/.meta"}
+
+	{embed="inc/.cssReference"}
+</head>
+
+<body class="news">
+
+{embed="/inc/.skip"}
+		
+<?php '#action-wrap' ?><div id="action-wrap">
+<?php '#action-wrap' ?><div id="action-wrap2">
+<?php '#radial-wrap' ?><div id="radial-wrap">
+			
+	
+	{embed="/inc/.main-nav"}
+		
+
+	<?php '#action' ?><div id="action">
+		
+		<h2 class="ir-cogaoke-news">Cog&rsquo;aoke News</h2>
+				
+	</div><?php '/#action' ?>
+
+</div><?php '/#radial-wrap2' ?>
+</div><?php '/#action-wrap2' ?>
+</div><?php '/#action-wrap' ?>	
+
+
+
+<?php '#content-wrap' ?><div id="content-wrap">	
+	
+	<?php '#content' ?><div id="content">
+							
+		<?php '#main' ?><div id="main" class="entry">
+	  
+	 {exp:channel:entries channel="news" limit="1"}
+		
+		<h3 class="zeta">{title}</h3>
+
+		<strong class="iota">{entry_date format="%F %d, %Y"}</strong>
+
+			{news_body}
+			
+		 {/exp:channel:entries}
+		
+		</div><?php '/#main' ?>
+		
+		
+		<?php '#sub' ?><div id="sub">
+		
+			<div class="icon-day day-{exp:mh_days_until target='2010-03-13'}">
+				<h3 class="kappa"><strong>{exp:mh_days_until target='2010-03-13'}</strong> Day{exp:mh_days_until:plural target='2010-03-13'} left until the party!</h3>
+				<p class="more"><a href="{path=/party}#scoot-inn-map">Get directions.</a></p>
+			</div>
+			
+			<div class="sidebar">
+				<ul>
+					{exp:channel:entries channel="news" limit="5" dynamic="no"}
+					<li>
+						<a href="{title_permalink=news/detail}"><strong class="beta">{title}</strong>
+							<strong class="iota">{entry_date format="%F %d, %Y"}</strong>
+							<img src="{news_image_medium}" width="220" height="100" alt="{title}" />
+						</a>
+					</li>
+					{/exp:channel:entries}
+				</ul>
+				
+				<p class="more"><a href="{path=/news/}">Cog&rsquo;aoke news</a></p>
+			</div>
+		
+		</div><?php '/#sub' ?>
+		
+	</div><?php '/#content' ?>
+	
+	{embed="inc/.twitter"}
+	
+</div><?php '/#content-wrap' ?>
+
+
+{embed="inc/.footer"}
+	
+{embed="inc/.jsReference"}
+		
+		
+</body>
+</html>

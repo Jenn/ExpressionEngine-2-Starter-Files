@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Search Results &mdash; ExpressionEngine Starter Files</title>    
+
+{embed="inc/meta"}
+
+{embed="inc/cssReference"}
+</head>
+
+<body class="home">
+
+{embed="/inc/skip"}
+		
+{embed="/inc/header"}
+	
+
+<?php '#content-wrap' ?><div id="content-wrap">	
+	
+	<?php '#content' ?><div id="content">
+	
+		<h1>{exp:search:total_results}{total_results}{/exp:search:total_results} result{if "{exp:search:total_results}" != 1}s{/if} for &ldquo;{exp:search:keywords}&rdquo;</h1>
+		
+		<p>Not what you&rsquo;re looking for? Try our <a href="{path='search/index'}">advanced search</a>.</p>
+		
+		{exp:search:search_results}
+			{if count==1}<ul class="roll">{/if}
+
+				<li>
+					
+					<h2><a href="{auto_path}">{title}</a></h2>
+					
+					<p>{excerpt}</p>
+
+					<a href="{auto_path}">{auto_path}}</a>
+								
+				</li>
+
+			{if count==total_results}</ul>{/if}
+		{/exp:search:search_results}	
+		
+		<div class="pagination">
+			<strong><span class="page-count">Showing {page_count}</span> {paginate}</strong>	
+		</div>
+				
+				
+	</div><?php '/#content' ?>
+	
+</div><?php '/#content-wrap' ?>
+
+
+{embed="inc/footer"}
+	
+{embed="inc/jsReference"}
+		
+		
+</body>
+</html>

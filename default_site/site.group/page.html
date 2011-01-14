@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+{exp:channel:entries channel="page" limit="1"}
+<title>{title} &mdash; ExpressionEngine Starter Files</title>    
+
+{embed="inc/meta"}
+
+{embed="inc/cssReference"}
+</head>
+
+<body class="home">
+
+{embed="/inc/skip"}
+		
+{embed="/inc/header"}
+	
+
+<?php '#content-wrap' ?><div id="content-wrap">	
+	
+	<?php '#content' ?><div id="content">		
+
+		<h1>{title}</h1>
+		
+		{if page-subhead}<p class="subhead">{page-subhead}</p>{/if}
+		
+		{page-body}
+						
+	</div><?php '/#content' ?>
+	
+</div><?php '/#content-wrap' ?>
+
+{/exp:channel:entries}
+
+{embed="inc/footer"}
+	
+{embed="inc/jsReference"}
+		
+		
+</body>
+</html>
