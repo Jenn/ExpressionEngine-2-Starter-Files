@@ -36,5 +36,5 @@ Jenn Lukas
 Additional Credits
 ------------------
 
-[@markhuot](http://twitter.com/markhuot) and [@kennymeyers](http://twitter.com/kennymeyers} have smart brains and helped with this project in large ways or small annoying ones. Not naming names. 
+[@markhuot](http://twitter.com/markhuot) and [@kennymeyers](http://twitter.com/kennymeyers) have smart brains and helped with this project in large ways or small annoying ones. Not naming names. 
 [Happy Cog](http://happycog.com) has given a reason to make it happen. 
